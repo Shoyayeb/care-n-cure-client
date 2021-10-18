@@ -7,42 +7,39 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-white dark:bg-gray-800 w-full py-8">
+            <footer className="bg-gray-800 text-gray-400 hover:text-white  dark:bg-gray-800 w-full py-8">
                 <div className="max-w-screen-xl mx-auto px-4">
                     <ul className="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
                         <li className="my-2">
                             <Link to="/home">Home</Link>
                         </li>
                         <li className="my-2">
-                            <Link to="/home">services</Link>
+                            <Link to="/services">services</Link>
                         </li>
                         <li className="my-2">
-                            <Link to="/home">About</Link>
+                            <Link to="/findadoctor">Find a Doctor</Link>
                         </li>
                         <li className="my-2">
-                            <Link to="/home">Login</Link>
+                            <Link className="text-red-500" to="/ambulance">Ambulance</Link>
                         </li>
                         <li className="my-2">
-                            <Link to="/home">Register</Link>
-                        </li>
-                        <li className="my-2">
-                            <Link to="/home">Add</Link>
+                            <Link to="/register">Register</Link>
                         </li>
 
                     </ul>
                     <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">
-                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        <a href="https://facebook.com" className="text-blue-600 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaFacebook></FaFacebook>
-                        </Link>
-                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </a>
+                        <a href="https://twitter.com" className="text-blue-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaTwitter></FaTwitter>
-                        </Link>
-                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </a>
+                        <a href="https://github.com" className="text-green-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaGithub></FaGithub>
-                        </Link>
-                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </a>
+                        <a href="https://linkedin.com" className="text-blue-500 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaLinkedinIn></FaLinkedinIn>
-                        </Link>
+                        </a>
 
                     </div>
                     <div className="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">

@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login-Register/Login/Login';
 import Register from './Pages/Login-Register/Register/Register';
 import NotFound from './Pages/NotFound/NotFound/NotFound';
+import Services from './Pages/Services/Services/Services';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register></Register>
+          </Route>
+          <Route path="/services">
+            <Services></Services>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

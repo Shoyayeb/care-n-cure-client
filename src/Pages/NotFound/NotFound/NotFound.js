@@ -1,6 +1,5 @@
 import React from 'react';
 import { AiOutlineWarning } from "react-icons/ai";
-import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
@@ -22,9 +21,14 @@ const NotFound = () => {
                         <p className="text-base font-normal text-gray-600 dark:text-gray-300">
                             The page you ara looking for was not found.
                         </p>
-
+                        <p className="text-base font-normal text-gray-600 dark:text-gray-300">
+                            You may return to
+                            <Link to="/home" className="ml-2 text-blue-600 hover:underline dark:text-blue-500">Home page</Link>
+                        </p>
                     </div>
                 </div>
+
+
             </div>
         </main>
     );
