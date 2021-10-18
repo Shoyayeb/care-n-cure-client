@@ -31,18 +31,18 @@ const Footer = () => {
 
                     </ul>
                     <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">
-                        <a href="#" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaFacebook></FaFacebook>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </Link>
+                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaTwitter></FaTwitter>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </Link>
+                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaGithub></FaGithub>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                        </Link>
+                        <Link to="/home" className="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
                             <FaLinkedinIn></FaLinkedinIn>
-                        </a>
+                        </Link>
 
                     </div>
                     <div className="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">

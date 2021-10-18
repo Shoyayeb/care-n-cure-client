@@ -1,25 +1,42 @@
-import { LockClosedIcon } from '@heroicons/react/solid'
+import { LockClosedIcon } from '@heroicons/react/solid';
+import { useState } from 'react';
+import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import useFirebase from './../../../hooks/useFirebase';
 
 export default function Login() {
+    const [formEmail, setFormEmail] = useState('');
+    const [formPass, setFormPass] = useState('');
+    const handleForm = (e) => {
+        e.preventDefault();
+    }
+    const { error, logOut, user, signInUsingGoogle, signInUsingFacebook, signUserWithEmail } = useFirebase();
+
+    const emailChange = (e) => {
+        setFormEmail(e.target.value);
+    }
+    const passChange = (e) => {
+        setFormPass(e.target.value);
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
                 <div>
                     <img
                         className="mx-auto h-12 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src="/logo.png"
                         alt="Workflow"
                     />
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
                         Or{' '}
-                        <Link href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                            start your 14-day free trial
+                        <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+                            Sign up for new account
                         </Link>
                     </p>
                 </div>
-                <form className="mt-8 space-y-6" action="#" method="POST">
+                <form className="mt-8 space-y-6" onSubmit={handleForm}>
                     <input type="hidden" name="remember" defaultValue="true" />
                     <div className="rounded-md shadow-sm -space-y-px">
                         <div>
@@ -27,6 +44,7 @@ export default function Login() {
                                 Email address
                             </label>
                             <input
+                                onChange={emailChange}
                                 id="email-address"
                                 name="email"
                                 type="email"
@@ -41,6 +59,7 @@ export default function Login() {
                                 Password
                             </label>
                             <input
+                                onChange={passChange}
                                 id="password"
                                 name="password"
                                 type="password"
@@ -66,21 +85,37 @@ export default function Login() {
                         </div>
 
                         <div className="text-sm">
-                            <Link href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                            <Link to="/home" className="font-medium text-indigo-600 hover:text-indigo-500">
                                 Forgot your password?
                             </Link>
                         </div>
+                    </div>
+                    <div>
+                        {error ? <p className="text-red-600 font-bold">{error}</p> : ''}
                     </div>
 
                     <div>
                         <button
                             type="submit"
+                            onClick={() => { signUserWithEmail(formEmail, formPass) }}
                             className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                                 <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                             </span>
                             Sign in
+                        </button>
+                    </div>
+                    <div
+                        onClick={signInUsingFacebook}
+                        class="flex gap-4 item-center">
+                        <button type="button" class="py-2 px-4 flex justify-center items-center  bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                            <FaFacebook width="20" height="20" fill="currentColor" className="mr-2" />
+                            Facebook
+                        </button>
+                        <button onClick={signInUsingGoogle} type="button" class="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                            <FaGoogle width="20" height="20" fill="currentColor" className="mr-2" />
+                            Google
                         </button>
                     </div>
                 </form>

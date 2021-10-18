@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const navigation = [
     { name: 'Home', href: '/home', current: true },
     { name: 'Services', href: '/login', current: false },
-    { name: 'Find a Doctor', href: 'findadoctor', current: false },
+    { name: 'Find a Doctor', href: '/findadoctor', current: false },
     { name: 'Appointments', href: '/appointments', current: false },
     { name: 'Login', href: '/login', current: false }
 ]
@@ -131,7 +131,7 @@ export default function Navbar() {
                             {navigation.map((item) => (
                                 <Link
                                     key={item.name}
-                                    href={item.href}
+                                    to={item.href}
                                     className={classNames(
                                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                         'block px-3 py-2 rounded-md text-base font-medium'
