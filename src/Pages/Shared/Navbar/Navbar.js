@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 
 const navigation = [
     { name: 'Home', href: '/home', current: true, customClass: '' },
-    { name: 'Services', href: '/services', current: false, customClass: '' },
-    { name: 'Find a Doctor', href: '/findadoctor', current: false, customClass: '' },
-    { name: 'Appointments', href: '/appointments', current: false, customClass: '' },
+    { name: 'Online Doctor', href: '/onlinedoctor', current: false, customClass: '' },
     { name: 'Ambulance', href: '/ambulance', current: false, customClass: 'text-red-500' },
 ]
 

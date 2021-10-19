@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Ambulance from './Pages/Ambulance/Ambulance/Ambulance';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login-Register/Login/Login';
 import Register from './Pages/Login-Register/Register/Register';
 import NotFound from './Pages/NotFound/NotFound/NotFound';
+import OnlineDoctor from './Pages/OnlineDoctor/OnlineDoctor/OnlineDoctor';
+import Service from './Pages/Services/Service/Service';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navbar from './Pages/Shared/Navbar/Navbar';
-import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home></Home>
           </Route>
           <Route path="/login">
@@ -27,8 +29,14 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/services">
-            <Services></Services>
+          <Route path="/onlinedoctor">
+            <OnlineDoctor></OnlineDoctor>
+          </Route>
+          <Route path="/ambulance">
+            <Ambulance></Ambulance>
+          </Route>
+          <Route path="/service/:serviceId">
+            <Service></Service>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

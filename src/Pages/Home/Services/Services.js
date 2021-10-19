@@ -7,10 +7,10 @@ const Services = () => {
         fetch('/services.json')
             .then(res => res.json())
             .then(data => setServices(data))
-    })
+    }, [])
     return (
 
-        <div className="w-full bg-white p-12">
+        <div className="w-full bg-white p-6 md:p-12">
             <div className="header flex items-end justify-between mb-12">
                 <div className="title">
                     <p className="text-4xl font-bold text-gray-800 mb-4">
