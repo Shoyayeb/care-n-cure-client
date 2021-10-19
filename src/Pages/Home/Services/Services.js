@@ -14,10 +14,10 @@ const Services = () => {
             <div className="header flex items-end justify-between mb-12">
                 <div className="title">
                     <p className="text-4xl font-bold text-gray-800 mb-4">
-                        Lastest articles
+                        Our Provided Services
                     </p>
                     <p className="text-2xl font-light text-gray-400">
-                        All article are verified by 2 experts and valdiate by the CTO
+                        All paid and non-paid services are available in only Bangladesh
                     </p>
                 </div>
             </div>

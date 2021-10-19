@@ -14,10 +14,7 @@ const Footer = () => {
                             <Link to="/home">Home</Link>
                         </li>
                         <li className="my-2">
-                            <Link to="/services">services</Link>
-                        </li>
-                        <li className="my-2">
-                            <Link to="/findadoctor">Find a Doctor</Link>
+                            <Link to="/onlinedoctor">Onlinedoctor</Link>
                         </li>
                         <li className="my-2">
                             <Link className="text-red-500" to="/ambulance">Ambulance</Link>
@@ -43,7 +40,7 @@ const Footer = () => {
 
                     </div>
                     <div className="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
-                        Created by Charlie
+                        Copyright © 2021 Shoyayeb
                     </div>
                 </div>
             </footer >

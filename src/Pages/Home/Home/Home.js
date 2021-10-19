@@ -11,7 +11,7 @@ const Home = () => {
             <Toasts></Toasts>
             <Hero></Hero>
             <Services></Services>
-            <Faq></Faq>
+            <Faq id="#faq"></Faq>
             <Doctors></Doctors>
         </div>
     );
