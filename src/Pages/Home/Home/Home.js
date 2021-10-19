@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
-import Services from './../../Services/Services/Services';
+import Services from './../Services/Services';
 import Toasts from './../Toasts/Toasts';
 
 const Home = () => {

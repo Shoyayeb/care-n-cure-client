@@ -1,7 +1,44 @@
 [
     {
+        "title": "Specialized doctors and nurses",
+        "description": "we have specialized doctor and well trained nurses for every type of patients",
+        "img": "https://image.freepik.com/free-photo/smiley-covid-recovery-center-female-doctor-checking-elder-patient-s-blood-pressure_23-2148847840.jpg",
+        "id": 1,
+        "cost": true
+    },
+    {
         "title": "24/7 service for everyone",
-        "description": ""
-
+        "description": "we provide 24×7 Health Care Consultancy to individuals & families",
+        "img": "https://image.freepik.com/free-photo/doctor-patient_1421-64.jpg",
+        "id": 2,
+        "cost": false
+    },
+    {
+        "title": "The best medical equipment",
+        "description": "we are providing the best medical equipment for the best treatment of you",
+        "img": "https://image.freepik.com/free-photo/medic-explaining-treatment-senior-woman-pointing-x-ray-tablet-pc-wearing-face-mask_482257-8203.jpg",
+        "id": 3,
+        "cost": true
+    },
+    {
+        "title": "Ambulance",
+        "description": "24/7 ambulance service in almost all over the country",
+        "img": "https://image.freepik.com/free-vector/emergency-ambulance-concept_23-2148537138.jpg",
+        "id": 4,
+        "cost": true
+    },
+    {
+        "title": "Online doctor",
+        "description": "Connect with a board-certified physician anytime with care & cure",
+        "img": "https://image.freepik.com/free-photo/close-up-patient-talking-doctor-online_23-2148868132.jpg",
+        "id": 5,
+        "cost": false
+    },
+    {
+        "title": "Senior Citizen Friendly",
+        "description": "a comfortable place for older patients with friendly nursing",
+        "img": "https://www.daymarcollege.edu/sites/default/files/nurses-helping-older-patients.jpg",
+        "id": 6,
+        "cost": false
     }
 ]
