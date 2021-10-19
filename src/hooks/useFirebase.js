@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signInWithPopup, signOut } from "firebase/auth";
 import { useEffect, useState } from 'react';
 import initializeAuthentication from '../Firebase/firebase.init';
 
@@ -7,14 +7,21 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const auth = getAuth();
-    const facebookProvider = new FacebookAuthProvider();
 
 
-    const createUserWithEmail = (formEmail, formPass) => {
+    const createUserWithEmail = (formEmail, formPass, formName) => {
+        console.log("form name", formName);
         createUserWithEmailAndPassword(auth, formEmail, formPass)
             .then(result => {
                 setUser(result.user);
                 setError('')
+                updateProfile(auth.currentUser, {
+                    displayName: formName
+                }).then(() => {
+                    console.log("updated");
+                }).catch((error) => {
+                    console.log(error.message);
+                });
             })
             .catch(error => {
                 setError(error.message)
@@ -45,21 +52,6 @@ const useFirebase = () => {
             })
     };
 
-    const signInUsingFacebook = () => {
-        signInWithPopup(auth, facebookProvider)
-            .then(result => {
-                setError('');
-                setUser(result.user);
-            })
-
-            .catch(error => {
-                setError(error.message)
-                console.log(error.message);
-            })
-    }
-
-
-
     const logOut = () => {
         signOut(auth)
             .then(() => {
@@ -80,7 +72,6 @@ const useFirebase = () => {
         error,
         logOut,
         signInUsingGoogle,
-        signInUsingFacebook,
         createUserWithEmail,
         signUserWithEmail
     }
