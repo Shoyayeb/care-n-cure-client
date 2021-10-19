@@ -2,90 +2,54 @@ import React from 'react';
 
 const Hero = () => {
     return (
-
-
-        <div class="max-w-screen-xl p-4 bg-white dark:bg-gray-800 mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20">
-            <div class="relative">
-                <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-                    <div class="lg:col-start-2 lg:max-w-2xl ml-auto">
-                        <p class="text-base leading-6 text-indigo-500 font-semibold uppercase">
-                            Interactive
-                        </p>
-                        <h4 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
-                            Interactivity between team members is the key of the success.
-                        </h4>
-                        <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
-                            Build a simply and powered collaborative space for all your team. Track, share, measure, you have a fully control, it&#x27;s never be simply and efficient.
-                        </p>
-                        <ul class="mt-8 md:grid md:grid-cols-2 gap-6">
-                            <li class="mt-6 lg:mt-0">
-                                <div class="flex">
-                                    <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
-                                        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
-                                        Live modifications
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="mt-6 lg:mt-0">
-                                <div class="flex">
-                                    <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
-                                        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
-                                        Data tracker
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="mt-6 lg:mt-0">
-                                <div class="flex">
-                                    <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
-                                        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
-                                        24/24 support
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="mt-6 lg:mt-0">
-                                <div class="flex">
-                                    <span class="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
-                                        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
-                                        Free tips to improve work time
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1">
-                        <div class="relative space-y-4">
-                            <div class="flex items-end justify-center lg:justify-start space-x-4">
-                                <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="/ambulance1.jpg" alt="1" />
-                                <img class="rounded-lg shadow-lg w-40 md:w-64" width="260" src="/ambulance2.jpg" alt="2" />
-                            </div>
-                            <div class="flex items-start justify-center lg:justify-start space-x-4 ml-12">
-                                <img class="rounded-lg shadow-lg w-24 md:w-40" width="170" src="/ambulance3.jpg" alt="3" />
-                                <img class="rounded-lg shadow-lg w-32 md:w-56" width="200" src="/ambulance4.jpg" alt="4" />
-                            </div>
+        <div>
+            <div class="bg-white dark:bg-gray-800 ">
+                <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+                    <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+                        <span class="block">
+                            Need an ambulance ?
+                        </span>
+                        <span class="block text-red-500">
+                            Call Now.
+                        </span>
+                    </h2>
+                    <p class="text-xl mt-4 max-w-md mx-auto text-gray-400">
+                        offering 24 hours of medical transport facilities. Our ambulance services in the whole country at an affordable cost with very affection and car. We as a team is experienced in providing emergency treatments with the shortest span of time.
+                    </p>
+                    <div class="lg:mt-0 lg:flex-shrink-0">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="tel:+8801212345678" class="py-4 px-6  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                +8801212345678
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* for later section */}
+            <div class="bg-white dark:bg-gray-800 overflow-hidden relative border shadow-xl">
+                <div class="text-start lg:w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+                    <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+                        {/* <span class="block">
+                            Book for later ?
+                        </span> */}
+                        <span class="block ">
+                            Or you can book an <span className="text-red-500">ambulance</span> for later
+                        </span>
+                    </h2>
+                    <p class="text-xl mt-4 text-gray-400">
+                        Get an affordable Ambulance Service to shift your loved one anywhere. Call our patient transport. specialist to discuss your need. Review transport options and. evaluate needs with loved ones. We coordinate, process, and schedule your trip.
+                    </p>
+                    <div class="lg:mt-0 lg:flex-shrink-0">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <button type="button" class="py-4 px-6  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img src="/pregnantwomen.jpg" alt="women" class="absolute h-full max-w-1/2 hidden lg:block right-0 top-0" />
+            </div>
+
         </div>
     );
 };

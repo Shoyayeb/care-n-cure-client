@@ -2,7 +2,7 @@ import { LockClosedIcon } from '@heroicons/react/solid';
 import { useState } from 'react';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import useFirebase from './../../../hooks/useFirebase';
+import useAuth from './../../../hooks/useAuth';
 
 export default function Register() {
     const [formEmail, setFormEmail] = useState('');
@@ -10,7 +10,7 @@ export default function Register() {
     const handleForm = (e) => {
         e.preventDefault();
     }
-    const { error, logOut, user, signInUsingGoogle, signInUsingFacebook, createUserWithEmail } = useFirebase();
+    const { error, signInUsingGoogle, signInUsingFacebook, createUserWithEmail } = useAuth();
 
     const emailChange = (e) => {
         setFormEmail(e.target.value);

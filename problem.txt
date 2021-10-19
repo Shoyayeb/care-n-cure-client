@@ -1,3 +1,0 @@
-1. copy from tailwindui
-2. name banner to hero
-3. warnings

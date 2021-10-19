@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
-import CallAmbulance from './../CallAmbulance/CallAmbulance';
+import Feature from './../Feature/Feature';
 
 const Ambulance = () => {
     return (
         <div>
             <Hero></Hero>
-            <CallAmbulance></CallAmbulance>
+            <Feature></Feature>
         </div>
     );
 };

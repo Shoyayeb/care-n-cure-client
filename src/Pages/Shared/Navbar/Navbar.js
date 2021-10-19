@@ -2,6 +2,7 @@ import { Disclosure, Menu } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { React } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from './../../../hooks/useAuth';
 
 
 const navigation = [
@@ -10,11 +11,15 @@ const navigation = [
     { name: 'Ambulance', href: '/ambulance', current: false, customClass: 'text-red-500' },
 ]
 
+
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+    const { user, logOut } = useAuth();
+    console.log(user);
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -64,16 +69,21 @@ export default function Navbar() {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
+                                {user.email ? <p className="bg-gray-400 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">{user.displayName}</p> : ''}
                                 <Menu as="div" className="ml-3 relative">
                                     <div>
                                         <Menu.Button className="bg-indigo-700 flex text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                                            <Link
+                                            {user.email ? <button
+                                                onClick={logOut}
+                                                className=' text-gray-200 hover:bg-indigo-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                                            >
+                                                Logout
+                                            </button> : <Link
                                                 to="/login"
                                                 className=' text-gray-200 hover:bg-indigo-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                             >
                                                 Login
-                                            </Link>
+                                            </Link>}
                                         </Menu.Button>
                                     </div>
                                 </Menu>
@@ -99,7 +109,8 @@ export default function Navbar() {
                         </div>
                     </Disclosure.Panel>
                 </>
-            )}
-        </Disclosure>
+            )
+            }
+        </Disclosure >
     )
 }

@@ -7,7 +7,6 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
 
 
@@ -34,14 +33,14 @@ const useFirebase = () => {
             });
     }
     const signInUsingGoogle = () => {
+        const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then(result => {
-                console.log(result.user);
                 setError('');
                 setUser(result.user);
             })
             .catch(error => {
-                setError(error.message)
+                setError(error.message);
                 console.log(error.message);
             })
     };
@@ -49,10 +48,10 @@ const useFirebase = () => {
     const signInUsingFacebook = () => {
         signInWithPopup(auth, facebookProvider)
             .then(result => {
-                console.log(result.user);
                 setError('');
                 setUser(result.user);
             })
+
             .catch(error => {
                 setError(error.message)
                 console.log(error.message);
