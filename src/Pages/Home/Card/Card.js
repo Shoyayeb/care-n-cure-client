@@ -8,10 +8,10 @@ const Card = (props) => {
             <div className="w-full block h-full cursor-default">
                 <img alt="servicce" src={img} className="max-h-40 w-full object-cover" />
                 <div className="bg-white dark:bg-gray-800 w-full p-4 my-5">
-                    {cost ? <span class=" px-4 py-2  text-base rounded-full text-red-400 border border-red-300 bg-red-100 ">
+                    {cost ? <span className=" px-4 py-2  text-base rounded-full text-red-400 border border-red-300 bg-red-100 ">
                         Paid
                     </span> :
-                        <span class=" px-4 py-2  text-base rounded-full text-green-400 border border-green-300 bg-green-100 ">
+                        <span className=" px-4 py-2  text-base rounded-full text-green-400 border border-green-300 bg-green-100 ">
                             Free
                         </span>
                     }

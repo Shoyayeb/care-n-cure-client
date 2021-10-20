@@ -24,7 +24,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <img src="/onlinedoctor.jpg" className="absolute h-full max-w-1/2 hidden lg:block right-0 top-0" />
+            <img src="/onlinedoctor.jpg" alt="onlinedoctor" className="absolute h-full max-w-1/2 hidden lg:block right-0 top-0" />
         </div>
 
 

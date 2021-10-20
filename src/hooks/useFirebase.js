@@ -47,16 +47,20 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
     const signUserWithEmail = (formEmail, formPass) => {
-        signInWithEmailAndPassword(auth, formEmail, formPass)
-            .then(result => {
-                setError('')
-                setUser(result.user);
-            })
-            .catch(error => {
-                setError(error.message)
-                console.log(error.message);
-            })
-            .finally(() => setIsLoading(false));
+        if (formEmail && formEmail) {
+            signInWithEmailAndPassword(auth, formEmail, formPass)
+                .then(result => {
+                    setError('')
+                    setUser(result.user);
+                })
+                .catch(error => {
+                    setError(error.message)
+                    console.log(error.message);
+                })
+                .finally(() => setIsLoading(false));
+        } else {
+            setError("please enter your email and password")
+        }
     }
     const signInUsingGoogle = () => {
         signInWithPopup(auth, googleProvider)

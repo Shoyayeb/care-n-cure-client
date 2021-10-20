@@ -39,6 +39,7 @@ export default function Login() {
                                 type="email"
                                 autoComplete="email"
                                 required
+                                aria-required="true"
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 placeholder="Email address"
                             />
@@ -54,6 +55,7 @@ export default function Login() {
                                 type="password"
                                 autoComplete="current-password"
                                 required
+                                aria-required="true"
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 placeholder="Password"
                             />
@@ -97,12 +99,12 @@ export default function Login() {
                     </div>
                     <div
 
-                        class="flex gap-4 item-center">
-                        <button onClick={signInUsingGoogle} type="button" class="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                        className="flex gap-4 item-center">
+                        <button onClick={signInUsingGoogle} type="button" className="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                             <FaGoogle width="20" height="20" fill="currentColor" className="mr-2" />
                             Google
                         </button>
-                        <button onClick={signInUsingGithub} type="button" class="py-2 px-4 flex justify-center items-center  bg-green-700 hover:bg-green-800 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                        <button onClick={signInUsingGithub} type="button" className="py-2 px-4 flex justify-center items-center  bg-green-700 hover:bg-green-800 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                             <FaGithub width="20" height="20" fill="currentColor" className="mr-2" />
                             Github
                         </button>

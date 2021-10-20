@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Details = (props) => {
-    const { title, description, img, cost, id } = props.serviceDetails;
+    const { title, description, img, cost } = props.serviceDetails;
     return (
         <div className="bg-white dark:bg-gray-800 overflow-hidden relative">
             <div className="lg:text-start text-center lg:w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
