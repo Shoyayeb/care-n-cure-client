@@ -19,7 +19,6 @@ function classNames(...classes) {
 
 export default function Navbar() {
     const { user, logOut } = useAuth();
-    console.log(user);
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (

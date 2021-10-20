@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Details = (props) => {
-    console.log(props.serviceDetails);
     const { title, description, img, cost, id } = props.serviceDetails;
     return (
         <div className="bg-white dark:bg-gray-800 overflow-hidden relative">

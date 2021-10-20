@@ -10,7 +10,7 @@ One of the best hospital website in bangladesh,Always providing the best patient
 ## [care-&-cure-hospital🌐](https://care-n-cure-hospital.web.app/)
 ### ⬆
 #
-## Hospital Features: 
+## Website Features: 
 1. Great UI for all types of people
 2. Easy interaction
 3. Responsive Design

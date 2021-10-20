@@ -1,28 +1,16 @@
 import { LockClosedIcon } from '@heroicons/react/solid';
-import { useState } from 'react';
-import { FaFacebook, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import useAuth from './../../../hooks/useAuth';
 
 export default function Register() {
-    const [formEmail, setFormEmail] = useState('');
-    const [formPass, setFormPass] = useState('');
-    const [formName, setFormName] = useState('');
+
 
     const handleForm = (e) => {
         e.preventDefault();
     }
-    const { error, signInUsingGoogle, createUserWithEmail } = useAuth();
+    const { error, signInUsingGoogle, signInUsingGithub, createUserWithEmail, emailChange, passChange, nameChange, formEmail, formPass, formName } = useAuth();
 
-    const emailChange = (e) => {
-        setFormEmail(e.target.value);
-    }
-    const passChange = (e) => {
-        setFormPass(e.target.value);
-    }
-    const nameChange = (e) => {
-        setFormName(e.target.value);
-    }
     // console.log(formName);
 
     return (
@@ -111,11 +99,15 @@ export default function Register() {
                     </div>
                     <div
 
-                        class="flex gap-4 item-center">
+                        className="flex gap-4 item-center">
 
-                        <button onClick={signInUsingGoogle} type="button" class="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                        <button onClick={signInUsingGoogle} type="button" className="py-2 px-4 flex justify-center items-center  bg-red-600 hover:bg-red-700 focus:ring-red-500 focus:ring-offset-red-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                             <FaGoogle width="20" height="20" fill="currentColor" className="mr-2" />
                             Google
+                        </button>
+                        <button onClick={signInUsingGithub} type="button" className="py-2 px-4 flex justify-center items-center  bg-green-700 hover:bg-green-800 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                            <FaGithub width="20" height="20" fill="currentColor" className="mr-2" />
+                            Github
                         </button>
                     </div>
                 </form>
