@@ -22,6 +22,9 @@ const Footer = () => {
                         <li className="my-2">
                             <Link to="/register">Register</Link>
                         </li>
+                        <li className="my-2">
+                            <Link to="/login">Login</Link>
+                        </li>
 
                     </ul>
                     <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">

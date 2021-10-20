@@ -4,14 +4,12 @@ import { React } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from './../../../hooks/useAuth';
 
-
+// data for navbar links
 const navigation = [
     { name: 'Home', href: '/home', current: true, customClass: '' },
     { name: 'Online Doctor', href: '/onlinedoctor', current: false, customClass: '' },
     { name: 'Ambulance', href: '/ambulance', current: false, customClass: 'text-red-500' },
 ]
-
-
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -20,6 +18,7 @@ function classNames(...classes) {
 export default function Navbar() {
     const { user, logOut } = useAuth();
     return (
+        // components from tailwind ui
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
                 <>
