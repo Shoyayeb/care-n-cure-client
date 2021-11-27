@@ -1,18 +1,13 @@
 
 
-# Care and Cure Hospital Website: 
+# [Care and Cure Hospital Website](https://care-n-cure-hospital.web.app/): 
 
 
 ## Description:
 One of the best hospital website in bangladesh,Always providing the best patient treatment with `specialized doctor` , `nursing staff` and `medical equipment`.
-#
-### ⬇
-## [care-&-cure-hospital🌐](https://care-n-cure-hospital.web.app/)
-### ⬆
-#
+## [Care and Cure Hospital Link](https://care-n-cure-hospital.web.app/)
 ## Website Features: 
-1. Great UI for all types of people
-2. Easy interaction
-3. Responsive Design
-4. Access from any device
-5. Easy Google Sign up
+- Complete healthcare related website with login/register system
+- Clients can login/register with email-password, gmail or github
+- Fully responsive on most device
+- **Technology**: Reactjs, react-router-dom, Tailwindcss, Tailwindui, Firebase
